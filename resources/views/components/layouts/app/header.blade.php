@@ -15,6 +15,9 @@
                 <flux:navbar.item icon="layout-grid" href="{{ route('dashboard') }}" :current="request()->routeIs('dashboard')" wire:navigate>
                     Dashboard
                 </flux:navbar.item>
+                <flux:navbar.item icon="cube" :href="route('products.index')" :current="request()->routeIs('products.*')" wire:navigate>
+                    Products
+                </flux:navbar.item>
             </flux:navbar>
 
             <flux:spacer />
@@ -100,6 +103,9 @@
                 <flux:navlist.group heading="Platform">
                     <flux:navlist.item icon="layout-grid" href="{{ route('dashboard') }}" :current="request()->routeIs('dashboard')" wire:navigate>
                         Dashboard
+                    </flux:navlist.item>
+                    <flux:navlist.item icon="cube" :href="route('products.index')" :current="request()->routeIs('products.*')" wire:navigate>
+                        Products
                     </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
